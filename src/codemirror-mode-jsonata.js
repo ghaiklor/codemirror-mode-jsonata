@@ -118,7 +118,7 @@ CodeMirror.defineMode('jsonata', function () {
       }
 
       // test for single char operators
-      if (OPERATORS.hasOwnProperty(state.currentChar)) {
+      if (OPERATORS.includes(state.currentChar)) {
         stream.next();
         return 'operator';
       }
@@ -171,9 +171,27 @@ CodeMirror.defineMode('jsonata', function () {
 
       // variable reference
       if (state.currentChar === '$') {
-        stream.eatWhile(/\w/);
+        stream.eatWhile(/[a-zA-Z0-9]/);
 
         return 'variable-2';
+      }
+
+      // Variable identifiers, operators, keywords, internal methods, etc...
+      if (/[a-zA-Z]/.test(state.currentChar)) {
+        // TODO
+        let name = state.currentChar;
+        state.currentChar = stream.next();
+
+        while (/[a-zA-Z]/.test(state.currentChar)) {
+          name += state.currentChar;
+          state.currentChar = stream.next();
+        }
+
+        if (RESERVED_KEYWORDS.includes(name)) {
+          return 'keyword';
+        }
+
+        return 'link';
       }
     }
   }
