@@ -1,2 +1,3 @@
 # codemirror-mode-jsonata
-CodeMirror mode for the JSONata language
+
+_CodeMirror mode for the JSONata language_

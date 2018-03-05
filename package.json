@@ -1,0 +1,22 @@
+{
+  "name": "codemirror-mode-jsonata",
+  "version": "1.0.0",
+  "description": "CodeMirror mode for the JSONata language",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghaiklor/codemirror-mode-jsonata.git"
+  },
+  "author": "ghaiklor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ghaiklor/codemirror-mode-jsonata/issues"
+  },
+  "homepage": "https://github.com/ghaiklor/codemirror-mode-jsonata#readme",
+  "devDependencies": {
+    "eslint": "^4.18.2"
+  }
+}
