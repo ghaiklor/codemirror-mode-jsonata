@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.35.0/codemirror.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.35.0/theme/dracula.min.css">
+  <meta charset="UTF-8">
+  <title>CodeMirror Mode JSONata</title>
+</head>
+<body>
+<textarea id="jsonata-editor" title="CodeMirror Mode JSONata">"Your JSONata expression here..."</textarea>
+<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.35.0/codemirror.min.js"></script>
+<script src="codemirror-mode-jsonata.js"></script>
+<script>
+  CodeMirror.fromTextArea(document.getElementById('jsonata-editor'), {
+    mode: 'jsonata',
+    theme: 'default',
+    lineNumbers: true,
+    autofocus: true
+  });
+</script>
+</body>
+</html>

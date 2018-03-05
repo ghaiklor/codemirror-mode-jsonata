@@ -2,5 +2,8 @@
   "extends": "eslint:recommended",
   "parserOptions": {
     "ecmaVersion": 6
+  },
+  "globals": {
+    "CodeMirror": true
   }
 }
