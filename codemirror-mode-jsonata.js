@@ -329,6 +329,7 @@ CodeMirror.defineMode('jsonata', function () {
       }
 
       // We didn't recognize the character, so it's definitely error
+      consume(peek());
       return `${TOKENS.KEYWORD} ${TOKENS.ERROR}`;
     }
   }
