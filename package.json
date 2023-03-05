@@ -14,6 +14,6 @@
   },
   "homepage": "https://github.com/ghaiklor/codemirror-mode-jsonata#readme",
   "devDependencies": {
-    "eslint": "4.18.2"
+    "eslint": "8.35.0"
   }
 }
